@@ -1,0 +1,17 @@
+{
+    "name": "panshulkhurana/dam-bulk-upload",
+    "description": "Migration Script for performing bulk asset migration from S3 to Acquia DAM",
+    "require": {
+        "aws/aws-sdk-php": "^3.342"
+    },
+    "autoload": {
+        "psr-4": {
+            "Panshulkhurana\\DamBulkUpload\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "'Panshul"
+        }
+    ]
+}
