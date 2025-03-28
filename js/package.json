@@ -1,0 +1,14 @@
+{
+  "name": "axl-dam-migration",
+  "version": "1.0.0",
+  "description": "A JS script for migrating assets from S3 to Acquia DAM",
+  "main": "handler.js",
+  "scripts": {
+    "start": "node handler.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1200.0",
+    "axios": "^1.4.0",
+    "form-data": "^4.0.0"
+  }
+}
