@@ -1,6 +1,6 @@
 # Acquia DAM Asset Migration
 
-This PHP script automates the migration of assets from an AWS S3 bucket to Acquia DAM using Acquia DAM's API.
+This script automates the migration of assets from an AWS S3 bucket to Acquia DAM using Acquia DAM's API.
 
 ## Features
 
@@ -8,51 +8,7 @@ This PHP script automates the migration of assets from an AWS S3 bucket to Acqui
 - Downloads images locally.
 - Uploads images to Acquia DAM using an authentication token.
 - Supports bulk asset migration.
-
-## Prerequisites
-
-- PHP 7.4+
-- Composer installed
-- AWS IAM User with S3 access
-- Acquia DAM API Access Token
-
-## Installation
-
-### Step 1: Clone the Repository
-
-```sh
-git clone https://github.com/your-repo/acquia-dam-migration.git
-cd acquia-dam-migration
-```
-
-### Step 2: Install Dependencies
-
-```sh
-composer install
-```
-
-### Step 3: Configure Environment Variables
-
-Update the script with your AWS and Acquia DAM credentials:
-
-```php
-$awsConfig = [
-    'region' => 'us-east-1',
-    'key'    => 'your-aws-access-key',
-    'secret' => 'your-aws-secret-key'
-];
-$bucket = 'your-s3-bucket-name';
-$accessToken = 'your-acquia-dam-access-token';
-$uploadProfileUuid = 'your-upload-profile-uuid';
-```
-
-## Running the Script
-
-Execute the script using PHP:
-
-```sh
-php AcquiaDamMigration.php
-```
+- Supports multiple tech stacks, including PHP and JavaScript
 
 ## How It Works
 
@@ -67,6 +23,12 @@ php AcquiaDamMigration.php
 - Verify the Acquia DAM access token is valid.
 - Check file permissions and storage limits.
 
+## Future Plans/Roadmap
+
+- Add Support for Python programming language
+- Add logic for addressing duplicate assets (identified by filename & handled via tags - skip, rename & continue)
+- Add logic to fetch folder names dynamically and map them to Upload Profiles via Acquia DAM API in order to avoid static folder checks in the code.
+
 ## License
 
 MIT License
@@ -75,3 +37,6 @@ MIT License
 
 Panshul Khurana
 
+## Thanks to the Contributors
+
+Swarad Mokal (for adding the JS equivalent of the migration)
